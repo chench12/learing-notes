@@ -119,11 +119,38 @@ Frontier-Eng对多个大模型展开了评测。在GPT-OSS-120B和OpenEvolve对4
 
 ## Test-time training to discover
 
-对于如何使用AI让科学问题发现超出现有最佳水平的解这样一个问题，以AlphaEvolve为代表的方法通过冻结的LLM开展搜索，通过不断迭代的优化过程寻找最佳水平的解。TTT-discover在测试时使用强化学习，不仅仅是为了搜索最佳水平的解，同时想让LLM在针对测试问题时积累的经验继续训练。
+对于如何使用AI让科学问题发现超出现有最佳水平的解这样一个问题，以AlphaEvolve为代表的方法通过冻结的LLM开展搜索，通过不断迭代的优化过程寻找最佳水平的解。AlphaEvolve 等演化搜索方法将既往尝试保存在缓冲区中，再通过人工设计、面向特定领域的启发式规则生成新的提示，这些提示虽然能够帮助LLM改进先前的解，但是无法改进LLM本身。
 
-TTT-discover的目标并不追求提高大量解的平均质量，也不要求泛化到其它问题，而是在当前问题上找到一个极其出色的解。TTT-discover所用的强化学习方式和传统的强化学习也有所不同，
+TTT-discover在测试时使用强化学习，不仅仅是为了搜索最佳水平的解，同时想让LLM在针对测试问题时积累的经验继续训练。
+
+TTT-discover的目标并不追求提高大量解的平均质量，也不要求泛化到其它问题，而是在当前问题上找到一个极其出色的解。TTT-discover所用的强化学习方式和传统的强化学习也有所不同，其只要求解决当前这个问题，并不要求泛化到其它问题。传统的强化学习会在很多问题上进行优化，再去让模型解决一些新的问题，而TTT-discover是针对一个问题反复的迭代优化，训练出的参数不需要对其它问题有效。另外TTT-discover需要的是找到一个最佳的解，并不需要找到最大化所有尝试平均奖励的策略，传统的强化学习的产物为策略，TTT-discover的最终产物为候选解。虽然最后TTT-discover依然会更新参数以让模型能提出更高质量的解，但是其目的始终是为了找到最佳的解，即便模型并没有变强。
 
 
+
+```mermaid
+flowchart LR
+    H[("候选解存档 H")]
+    L["语言模型 πθ<br/>输入：问题 + 已有解"]
+    E["评估器<br/>验证正确性 · 计算奖励"]
+    T["训练器<br/>自适应熵型目标 + KL 正则"]
+    O["历史最佳解"]
+
+    H -->|PUCT 选择起点| L
+    L -->|生成候选解| E
+    E -->|回存候选解与评分| H
+    E -.->|本轮轨迹与奖励| T
+    T -.->|更新 LoRA 参数| L
+    H -->|预算结束后输出| O
+
+    classDef search fill:#eff6ff,stroke:#2563eb,color:#172554
+    classDef evaluate fill:#fffbeb,stroke:#d97706,color:#78350f
+    classDef learn fill:#f5f3ff,stroke:#7c3aed,color:#3b0764
+    classDef output fill:#ecfdf5,stroke:#059669,color:#064e3b,stroke-width:2px
+    class H,L search
+    class E evaluate
+    class T learn
+    class O output
+```
 
 ## 参考链接
 

@@ -1,0 +1,22 @@
+flowchart LR
+    H[("候选解存档 H")]
+    L["语言模型 πθ<br/>输入：问题 + 已有解"]
+    E["评估器<br/>验证正确性 · 计算奖励"]
+    T["训练器<br/>自适应熵型目标 + KL 正则"]
+    O["历史最佳解"]
+
+    H -->|PUCT 选择起点| L
+    L -->|生成候选解| E
+    E -->|回存候选解与评分| H
+    E -.->|本轮轨迹与奖励| T
+    T -.->|更新 LoRA 参数| L
+    H -->|预算结束后输出| O
+
+    classDef search fill:#eff6ff,stroke:#2563eb,color:#172554
+    classDef evaluate fill:#fffbeb,stroke:#d97706,color:#78350f
+    classDef learn fill:#f5f3ff,stroke:#7c3aed,color:#3b0764
+    classDef output fill:#ecfdf5,stroke:#059669,color:#064e3b,stroke-width:2px
+    class H,L search
+    class E evaluate
+    class T learn
+    class O output
