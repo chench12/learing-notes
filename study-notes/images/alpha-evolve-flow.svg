@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="930" viewBox="0 0 1400 930">
+<rect width="100%" height="100%" fill="white"/>
+<text x="700" y="35" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="31" font-weight="700" fill="#8051bf">AlphaEvolve · 多组件代码修改与自动评估</text>
+<rect x="50" y="100" width="580" height="130" rx="15" fill="#f6f1fd" stroke="#8051bf" stroke-width="2"/>
+<text x="340.0" y="149.0" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="700" fill="#8051bf">人类提供任务定义</text>
+<text x="340.0" y="187.0" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="400" fill="#344256">初始程序、评估函数、提示配置与可选背景</text>
+<rect x="770" y="100" width="580" height="130" rx="15" fill="#f6f1fd" stroke="#8051bf" stroke-width="2"/>
+<text x="1060.0" y="149.0" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="700" fill="#8051bf">进化数据库</text>
+<text x="1060.0" y="187.0" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="400" fill="#344256">保存程序与评估结果，兼顾质量和多样性</text>
+<rect x="1010" y="340" width="340" height="150" rx="15" fill="#f6f1fd" stroke="#8051bf" stroke-width="2"/>
+<text x="1180.0" y="383.5" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="700" fill="#8051bf">提示采样器</text>
+<text x="1180.0" y="421.5" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="400" fill="#344256">采样父程序与历史参考程序</text>
+<text x="1180.0" y="452.5" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="400" fill="#344256">组合任务背景和评估反馈</text>
+<rect x="530" y="340" width="340" height="150" rx="15" fill="#f6f1fd" stroke="#8051bf" stroke-width="2"/>
+<text x="700.0" y="383.5" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="700" fill="#8051bf">LLM 集成</text>
+<text x="700.0" y="421.5" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="400" fill="#344256">原论文：Gemini 2.0 Flash / Pro</text>
+<text x="700.0" y="452.5" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="400" fill="#344256">提出代码修改补丁或完整代码</text>
+<rect x="50" y="340" width="340" height="150" rx="15" fill="#f6f1fd" stroke="#8051bf" stroke-width="2"/>
+<text x="220.0" y="383.5" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="700" fill="#8051bf">应用候选修改</text>
+<text x="220.0" y="421.5" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="400" fill="#344256">通常应用 search/replace 补丁</text>
+<text x="220.0" y="452.5" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="400" fill="#344256">可修改多个标记代码块</text>
+<rect x="50" y="610" width="340" height="150" rx="15" fill="#f6f1fd" stroke="#8051bf" stroke-width="2"/>
+<text x="220.0" y="653.5" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="700" fill="#8051bf">评估器池</text>
+<text x="220.0" y="691.5" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="400" fill="#344256">执行用户定义的 evaluate</text>
+<text x="220.0" y="722.5" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="400" fill="#344256">可选级联评估与补充反馈</text>
+<rect x="530" y="610" width="340" height="150" rx="15" fill="#f6f1fd" stroke="#8051bf" stroke-width="2"/>
+<text x="700.0" y="653.5" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="700" fill="#8051bf">候选及结果入库</text>
+<text x="700.0" y="691.5" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="400" fill="#344256">保存程序、分数与执行输出</text>
+<text x="700.0" y="722.5" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="400" fill="#344256">不限于刷新最佳分数的候选</text>
+<polyline points="630,165 770,165" fill="none" stroke="#8051bf" stroke-width="3"/>
+<polygon points="770.00,165.00 754.69,172.39 754.69,157.61" fill="#8051bf"/>
+<polyline points="1060,230 1060,280 1180,280 1180,340" fill="none" stroke="#8051bf" stroke-width="3"/>
+<polygon points="1180.00,340.00 1172.61,324.69 1187.39,324.69" fill="#8051bf"/>
+<polyline points="1010,415 870,415" fill="none" stroke="#8051bf" stroke-width="3"/>
+<polygon points="870.00,415.00 885.31,407.61 885.31,422.39" fill="#8051bf"/>
+<polyline points="530,415 390,415" fill="none" stroke="#8051bf" stroke-width="3"/>
+<polygon points="390.00,415.00 405.31,407.61 405.31,422.39" fill="#8051bf"/>
+<polyline points="220,490 220,610" fill="none" stroke="#8051bf" stroke-width="3"/>
+<polygon points="220.00,610.00 212.61,594.69 227.39,594.69" fill="#8051bf"/>
+<polyline points="390,685 530,685" fill="none" stroke="#8051bf" stroke-width="3"/>
+<polygon points="530.00,685.00 514.69,692.39 514.69,677.61" fill="#8051bf"/>
+<polyline points="870,685 1380,685 1380,165 1350,165" fill="none" stroke="#8051bf" stroke-width="3" stroke-dasharray="11 9"/>
+<polygon points="1350.00,165.00 1365.31,157.61 1365.31,172.39" fill="#8051bf"/>
+<text x="700" y="830" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="400" fill="#263447">数据库机制受到 MAP-Elites 与岛屿模型结合的启发</text>
+<text x="700" y="875" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="400" fill="#263447">异步协调采样和评估，持续循环至搜索预算耗尽</text>
+</svg>

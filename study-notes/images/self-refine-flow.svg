@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="910" viewBox="0 0 1400 910">
+<rect width="100%" height="100%" fill="white"/>
+<text x="700" y="35" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="31" font-weight="700" fill="#2563c4">Self-Refine · 同一个模型的生成、反馈与改进</text>
+<rect x="50" y="100" width="340" height="130" rx="15" fill="#eff5ff" stroke="#2563c4" stroke-width="2"/>
+<text x="220.0" y="149.0" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="700" fill="#2563c4">输入问题</text>
+<text x="220.0" y="187.0" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="400" fill="#344256">问题 x 与任务提示</text>
+<rect x="530" y="100" width="340" height="130" rx="15" fill="#eff5ff" stroke="#2563c4" stroke-width="2"/>
+<text x="700.0" y="149.0" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="700" fill="#2563c4">初始生成</text>
+<text x="700.0" y="187.0" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="400" fill="#344256">使用生成提示 p_gen</text>
+<rect x="1010" y="100" width="340" height="130" rx="15" fill="#eff5ff" stroke="#2563c4" stroke-width="2"/>
+<text x="1180.0" y="149.0" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="700" fill="#2563c4">初始输出</text>
+<text x="1180.0" y="187.0" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="400" fill="#344256">令当前输出为 y_0</text>
+<rect x="1010" y="340" width="340" height="150" rx="15" fill="#2563c4" stroke="#2563c4" stroke-width="2"/>
+<text x="1180.0" y="383.5" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="700" fill="white">生成反馈</text>
+<text x="1180.0" y="421.5" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="400" fill="white">同一 LLM 读取 x 与当前输出</text>
+<text x="1180.0" y="452.5" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="400" fill="white">反馈需具体、可操作</text>
+<rect x="530" y="340" width="340" height="150" rx="15" fill="#eff5ff" stroke="#2563c4" stroke-width="2"/>
+<text x="700.0" y="399.0" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="700" fill="#2563c4">满足停止条件？</text>
+<text x="700.0" y="437.0" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="400" fill="#344256">达到迭代上限，或反馈要求停止</text>
+<rect x="50" y="340" width="340" height="150" rx="15" fill="#eff5ff" stroke="#2563c4" stroke-width="2"/>
+<text x="220.0" y="383.5" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="700" fill="#2563c4">根据反馈改进</text>
+<text x="220.0" y="421.5" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="400" fill="#344256">同一 LLM 使用改进提示</text>
+<text x="220.0" y="452.5" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="400" fill="#344256">生成下一轮输出</text>
+<rect x="50" y="610" width="340" height="140" rx="15" fill="#eff5ff" stroke="#2563c4" stroke-width="2"/>
+<text x="220.0" y="648.5" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="700" fill="#2563c4">保留历史</text>
+<text x="220.0" y="686.5" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="400" fill="#344256">追加输出与反馈</text>
+<text x="220.0" y="717.5" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="400" fill="#344256">将新输出设为当前输出</text>
+<rect x="530" y="610" width="340" height="140" rx="15" fill="#eff5ff" stroke="#2563c4" stroke-width="2"/>
+<text x="700.0" y="664.0" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="700" fill="#2563c4">返回当前输出</text>
+<text x="700.0" y="702.0" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="400" fill="#344256">无需额外训练或更新参数</text>
+<polyline points="390,165 530,165" fill="none" stroke="#2563c4" stroke-width="3"/>
+<polygon points="530.00,165.00 514.69,172.39 514.69,157.61" fill="#2563c4"/>
+<polyline points="870,165 1010,165" fill="none" stroke="#2563c4" stroke-width="3"/>
+<polygon points="1010.00,165.00 994.69,172.39 994.69,157.61" fill="#2563c4"/>
+<polyline points="1180,230 1180,340" fill="none" stroke="#2563c4" stroke-width="3"/>
+<polygon points="1180.00,340.00 1172.61,324.69 1187.39,324.69" fill="#2563c4"/>
+<polyline points="1010,415 870,415" fill="none" stroke="#2563c4" stroke-width="3"/>
+<polygon points="870.00,415.00 885.31,407.61 885.31,422.39" fill="#2563c4"/>
+<polyline points="530,415 390,415" fill="none" stroke="#2563c4" stroke-width="3"/>
+<polygon points="390.00,415.00 405.31,407.61 405.31,422.39" fill="#2563c4"/>
+<text x="460" y="390" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="700" fill="#2563c4">否</text>
+<polyline points="700,490 700,610" fill="none" stroke="#2563c4" stroke-width="3"/>
+<polygon points="700.00,610.00 692.61,594.69 707.39,594.69" fill="#2563c4"/>
+<text x="730" y="550" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="700" fill="#2563c4">是</text>
+<polyline points="220,490 220,610" fill="none" stroke="#2563c4" stroke-width="3"/>
+<polygon points="220.00,610.00 212.61,594.69 227.39,594.69" fill="#2563c4"/>
+<polyline points="220,750 220,825 1180,825 1180,490" fill="none" stroke="#2563c4" stroke-width="3" stroke-dasharray="11 9"/>
+<polygon points="1180.00,490.00 1187.39,505.31 1172.61,505.31" fill="#2563c4"/>
+<text x="700" y="860" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#263447">改进提示保留历史；最终输出不保证每轮质量单调提高</text>
+</svg>

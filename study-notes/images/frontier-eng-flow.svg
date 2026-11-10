@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1060" viewBox="0 0 1400 1060">
+<rect width="100%" height="100%" fill="white"/>
+<text x="700" y="35" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="31" font-weight="700" fill="#158c98">Frontier-Eng · 固定预算下的工程优化评测</text>
+<rect x="50" y="100" width="580" height="130" rx="15" fill="#effbfc" stroke="#158c98" stroke-width="2"/>
+<text x="340.0" y="149.0" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="700" fill="#158c98">任务三元组（C, x_0, E）</text>
+<text x="340.0" y="187.0" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="400" fill="#344256">只读上下文 C、可行初始方案 x_0、固定评估器 E</text>
+<rect x="770" y="100" width="580" height="130" rx="15" fill="#effbfc" stroke="#158c98" stroke-width="2"/>
+<text x="1060.0" y="149.0" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="700" fill="#158c98">初始方案评估</text>
+<text x="1060.0" y="187.0" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="400" fill="#344256">获得（v_0, s_0），建立初始历史</text>
+<rect x="1010" y="340" width="340" height="150" rx="15" fill="#effbfc" stroke="#158c98" stroke-width="2"/>
+<text x="1180.0" y="383.5" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="700" fill="#158c98">历史 H</text>
+<text x="1180.0" y="421.5" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="400" fill="#344256">记录候选、可行性与得分</text>
+<text x="1180.0" y="452.5" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="400" fill="#344256">原则上保留全部尝试</text>
+<rect x="530" y="340" width="340" height="150" rx="15" fill="#effbfc" stroke="#158c98" stroke-width="2"/>
+<text x="700.0" y="383.5" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="700" fill="#158c98">搜索策略选择历史</text>
+<text x="700.0" y="421.5" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="400" fill="#344256">进化选择、树搜索、bandit 等</text>
+<text x="700.0" y="452.5" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="400" fill="#344256">决定给模型呈现的历史子集</text>
+<rect x="50" y="340" width="340" height="150" rx="15" fill="#effbfc" stroke="#158c98" stroke-width="2"/>
+<text x="220.0" y="383.5" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="700" fill="#158c98">LLM 提出候选</text>
+<text x="220.0" y="421.5" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="400" fill="#344256">读取任务上下文与所选历史</text>
+<text x="220.0" y="452.5" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="400" fill="#344256">输出可编辑产物的新版本</text>
+<rect x="50" y="610" width="340" height="150" rx="15" fill="#effbfc" stroke="#158c98" stroke-width="2"/>
+<text x="220.0" y="653.5" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="700" fill="#158c98">执行固定评估器</text>
+<text x="220.0" y="691.5" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="400" fill="#344256">返回可行性 v 与得分 s</text>
+<text x="220.0" y="722.5" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="400" fill="#344256">不可行方案的得分不计入最佳</text>
+<rect x="530" y="610" width="340" height="150" rx="15" fill="#effbfc" stroke="#158c98" stroke-width="2"/>
+<text x="700.0" y="653.5" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="700" fill="#158c98">更新历史与预算</text>
+<text x="700.0" y="691.5" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="400" fill="#344256">追加候选和评估结果</text>
+<text x="700.0" y="722.5" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="400" fill="#344256">可行与不可行尝试都消耗预算</text>
+<rect x="1010" y="610" width="340" height="150" rx="15" fill="#effbfc" stroke="#158c98" stroke-width="2"/>
+<text x="1180.0" y="669.0" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="700" fill="#158c98">预算是否耗尽？</text>
+<text x="1180.0" y="707.0" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="400" fill="#344256">预算 B 按候选评估次数计</text>
+<rect x="1010" y="880" width="340" height="130" rx="15" fill="#158c98" stroke="#158c98" stroke-width="2"/>
+<text x="1180.0" y="929.0" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="700" fill="white">输出历史最佳可行方案</text>
+<text x="1180.0" y="967.0" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="400" fill="white">包括初始方案在内</text>
+<polyline points="630,165 770,165" fill="none" stroke="#158c98" stroke-width="3"/>
+<polygon points="770.00,165.00 754.69,172.39 754.69,157.61" fill="#158c98"/>
+<polyline points="1060,230 1060,280 1180,280 1180,340" fill="none" stroke="#158c98" stroke-width="3"/>
+<polygon points="1180.00,340.00 1172.61,324.69 1187.39,324.69" fill="#158c98"/>
+<polyline points="1010,415 870,415" fill="none" stroke="#158c98" stroke-width="3"/>
+<polygon points="870.00,415.00 885.31,407.61 885.31,422.39" fill="#158c98"/>
+<polyline points="530,415 390,415" fill="none" stroke="#158c98" stroke-width="3"/>
+<polygon points="390.00,415.00 405.31,407.61 405.31,422.39" fill="#158c98"/>
+<polyline points="220,490 220,610" fill="none" stroke="#158c98" stroke-width="3"/>
+<polygon points="220.00,610.00 212.61,594.69 227.39,594.69" fill="#158c98"/>
+<polyline points="390,685 530,685" fill="none" stroke="#158c98" stroke-width="3"/>
+<polygon points="530.00,685.00 514.69,692.39 514.69,677.61" fill="#158c98"/>
+<polyline points="870,685 1010,685" fill="none" stroke="#158c98" stroke-width="3"/>
+<polygon points="1010.00,685.00 994.69,692.39 994.69,677.61" fill="#158c98"/>
+<polyline points="1180,610 1180,490" fill="none" stroke="#158c98" stroke-width="3" stroke-dasharray="11 9"/>
+<polygon points="1180.00,490.00 1187.39,505.31 1172.61,505.31" fill="#158c98"/>
+<text x="1215" y="550" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="700" fill="#158c98">否</text>
+<polyline points="1180,760 1180,880" fill="none" stroke="#158c98" stroke-width="3"/>
+<polygon points="1180.00,880.00 1172.61,864.69 1187.39,864.69" fill="#158c98"/>
+<text x="1215" y="820" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="700" fill="#158c98">是</text>
+<text x="510" y="865" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="700" fill="#263447">目标：最大化预算内的历史最佳可行得分</text>
+<text x="510" y="915" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#263447">评估器与参考数据固定；指标由验证器输出解析</text>
+<text x="510" y="960" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#263447">基准不绑定某一种搜索算法</text>
+</svg>

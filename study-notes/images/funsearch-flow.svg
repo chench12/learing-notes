@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1040" viewBox="0 0 1400 1040">
+<rect width="100%" height="100%" fill="white"/>
+<text x="700" y="35" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="31" font-weight="700" fill="#b96515">FunSearch · 用执行评估引导程序演化</text>
+<rect x="50" y="100" width="580" height="130" rx="15" fill="#fff7ec" stroke="#b96515" stroke-width="2"/>
+<text x="340.0" y="149.0" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="700" fill="#b96515">任务输入</text>
+<text x="340.0" y="187.0" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="400" fill="#344256">初始函数、固定骨架、evaluate 与评估输入</text>
+<rect x="770" y="100" width="580" height="130" rx="15" fill="#fff7ec" stroke="#b96515" stroke-width="2"/>
+<text x="1060.0" y="149.0" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="700" fill="#b96515">初始化程序数据库</text>
+<text x="1060.0" y="187.0" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="400" fill="#344256">评估初始程序，并将副本加入所有岛屿</text>
+<rect x="1010" y="340" width="340" height="150" rx="15" fill="#fff7ec" stroke="#b96515" stroke-width="2"/>
+<text x="1180.0" y="383.5" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="700" fill="#b96515">选择一个岛屿</text>
+<text x="1180.0" y="421.5" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="400" fill="#344256">均匀随机选择</text>
+<text x="1180.0" y="452.5" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="400" fill="#344256">后续候选写回该岛屿</text>
+<rect x="530" y="340" width="340" height="150" rx="15" fill="#fff7ec" stroke="#b96515" stroke-width="2"/>
+<text x="700.0" y="383.5" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="700" fill="#b96515">岛屿内采样程序</text>
+<text x="700.0" y="421.5" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="400" fill="#344256">先选 cluster，再偏好短程序</text>
+<text x="700.0" y="452.5" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="400" fill="#344256">论文通常取 k = 2</text>
+<rect x="50" y="340" width="340" height="150" rx="15" fill="#fff7ec" stroke="#b96515" stroke-width="2"/>
+<text x="220.0" y="383.5" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="700" fill="#b96515">构造版本提示</text>
+<text x="220.0" y="421.5" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="400" fill="#344256">程序按分数从低到高排列</text>
+<text x="220.0" y="452.5" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="400" fill="#344256">追加下一版本的函数头</text>
+<rect x="50" y="600" width="340" height="150" rx="15" fill="#fff7ec" stroke="#b96515" stroke-width="2"/>
+<text x="220.0" y="643.5" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="700" fill="#b96515">LLM 补全关键函数</text>
+<text x="220.0" y="681.5" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="400" fill="#344256">预训练代码模型</text>
+<text x="220.0" y="712.5" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="400" fill="#344256">无须针对目标任务微调</text>
+<rect x="530" y="600" width="340" height="150" rx="15" fill="#fff7ec" stroke="#b96515" stroke-width="2"/>
+<text x="700.0" y="643.5" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="700" fill="#b96515">执行评估</text>
+<text x="700.0" y="681.5" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="400" fill="#344256">放回骨架，检查正确性</text>
+<text x="700.0" y="712.5" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="400" fill="#344256">取得各评估输入的得分</text>
+<rect x="1010" y="600" width="340" height="150" rx="15" fill="#fff7ec" stroke="#b96515" stroke-width="2"/>
+<text x="1180.0" y="643.5" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="700" fill="#b96515">有效候选入库</text>
+<text x="1180.0" y="681.5" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="400" fill="#344256">存回原岛屿</text>
+<text x="1180.0" y="712.5" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="400" fill="#344256">按 signature 加入或新建 cluster</text>
+<rect x="50" y="850" width="820" height="140" rx="15" fill="#fff7ec" stroke="#b96515" stroke-width="2"/>
+<text x="460.0" y="888.5" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="700" fill="#b96515">周期性重置较差的一半岛屿</text>
+<text x="460.0" y="926.5" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="400" fill="#344256">每个被清空岛屿随机选择一个存活岛屿</text>
+<text x="460.0" y="957.5" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="400" fill="#344256">复制该存活岛屿的最佳程序作为新种子</text>
+<polyline points="630,165 770,165" fill="none" stroke="#b96515" stroke-width="3"/>
+<polygon points="770.00,165.00 754.69,172.39 754.69,157.61" fill="#b96515"/>
+<polyline points="1060,230 1060,280 1180,280 1180,340" fill="none" stroke="#b96515" stroke-width="3"/>
+<polygon points="1180.00,340.00 1172.61,324.69 1187.39,324.69" fill="#b96515"/>
+<polyline points="1010,415 870,415" fill="none" stroke="#b96515" stroke-width="3"/>
+<polygon points="870.00,415.00 885.31,407.61 885.31,422.39" fill="#b96515"/>
+<polyline points="530,415 390,415" fill="none" stroke="#b96515" stroke-width="3"/>
+<polygon points="390.00,415.00 405.31,407.61 405.31,422.39" fill="#b96515"/>
+<polyline points="220,490 220,600" fill="none" stroke="#b96515" stroke-width="3"/>
+<polygon points="220.00,600.00 212.61,584.69 227.39,584.69" fill="#b96515"/>
+<polyline points="390,675 530,675" fill="none" stroke="#b96515" stroke-width="3"/>
+<polygon points="530.00,675.00 514.69,682.39 514.69,667.61" fill="#b96515"/>
+<polyline points="870,675 1010,675" fill="none" stroke="#b96515" stroke-width="3"/>
+<polygon points="1010.00,675.00 994.69,682.39 994.69,667.61" fill="#b96515"/>
+<text x="940" y="640" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="700" fill="#b96515">通过检查</text>
+<polyline points="1350,675 1380,675 1380,415 1350,415" fill="none" stroke="#b96515" stroke-width="3" stroke-dasharray="11 9"/>
+<polygon points="1350.00,415.00 1365.31,407.61 1365.31,422.39" fill="#b96515"/>
+<polyline points="870,920 1180,920 1180,750" fill="none" stroke="#b96515" stroke-width="3" stroke-dasharray="11 9"/>
+<polygon points="1180.00,750.00 1187.39,765.31 1172.61,765.31" fill="#b96515"/>
+<text x="1090" y="885" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="700" fill="#b96515">重置后的新种子</text>
+<text x="460" y="805" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#263447">原论文每 4 小时触发一次岛屿重置</text>
+<text x="700" y="1010" dominant-baseline="central" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#263447">cluster 温度周期性下降并恢复；signature 是完整的跨输入得分元组</text>
+</svg>

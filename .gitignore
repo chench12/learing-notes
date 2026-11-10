@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# Node
+node_modules/
+dist/
+build/
+npm-debug.log*
+
+# Java / Kotlin
+target/
+*.class
+.gradle/
+
+# C / C++
+*.o
+*.obj
+*.exe
+*.out
+cmake-build-debug/
+
+# 编辑器 / IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# 系统
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 环境变量与密钥
+.env
+.env.local
+*.key
+*.pem
+
+# 临时文件
+*.log
+*.tmp
+tmp/
