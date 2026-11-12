@@ -1,0 +1,47 @@
+# Local experiment data and generated comparisons
+/experiments/
+/dev_runs/
+/runs/
+/comparisons/
+
+# Downloaded installers and local diagnostics
+/.tools/
+*.exe
+*.msi
+*.vhdx
+
+# Credentials and personal overrides
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+configs/*.local.json
+
+# Python environments, caches and build output
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# Runtime databases and logs
+*.sqlite3
+*.sqlite3-journal
+*.sqlite3-wal
+*.sqlite3-shm
+*.log
+
+# Editors and operating system files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+Desktop.ini

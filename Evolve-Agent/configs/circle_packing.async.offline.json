@@ -1,0 +1,118 @@
+{
+  "task": {
+    "task_id": "circle_packing_26",
+    "directory": "tasks/circle_packing",
+    "timeout_seconds": 3.0
+  },
+  "model": {
+    "base_url": "https://sub.callai.one/v1",
+    "model": "gpt-6.1-sol",
+    "key_env": "RELAY_API_KEY",
+    "max_tokens": 4096
+  },
+  "execution": {
+    "backend": "local-reviewed",
+    "docker_image": null,
+    "startup_timeout_seconds": 30.0,
+    "memory_mb": 512,
+    "max_processes": 8,
+    "max_log_bytes": 1000000,
+    "max_solution_bytes": 5000000,
+    "max_workdir_bytes": 10000000,
+    "evaluator_timeout_seconds": 5.0
+  },
+  "search": {
+    "generation_mode": "patch",
+    "seed": 42,
+    "max_generations": 6
+  },
+  "archive": {
+    "strategy": "island_grid",
+    "islands": 2,
+    "axes": [
+      {
+        "name": "radius_cv",
+        "edges": [
+          0.0,
+          0.05,
+          0.15,
+          0.35,
+          0.75,
+          1.5,
+          5.000001
+        ]
+      },
+      {
+        "name": "boundary_fraction",
+        "edges": [
+          0.0,
+          0.25,
+          0.5,
+          0.75,
+          1.0
+        ]
+      }
+    ],
+    "cell_capacity": 1,
+    "island_selection": "round_robin",
+    "parent_sampling": "puct_cell",
+    "temperature_initial": 0.25,
+    "temperature_period": 20,
+    "puct_c": 1.0,
+    "seed_assignment": "all",
+    "tie_break": "candidate_id_ascending",
+    "migration_interval": 4,
+    "migration_count": 1,
+    "migration_topology": "ring",
+    "restart": "none"
+  },
+  "context": {
+    "inspirations": 2,
+    "max_bytes": 60000,
+    "reference_max_bytes": 8000,
+    "diagnostic_max_bytes": 1500,
+    "templates": [
+      {
+        "id": "improve",
+        "weight": 2.0,
+        "instruction": "分析父代的数值瓶颈，提出并实现可验证的改进。"
+      },
+      {
+        "id": "alternative",
+        "weight": 1.0,
+        "instruction": "探索与父代不同的构造或搜索策略，保留有效思路并避免只改变常数。"
+      }
+    ]
+  },
+  "budget": {
+    "max_calls": 100,
+    "max_tokens": 1000000,
+    "max_evaluation_seconds": 3600.0,
+    "max_wall_seconds": 7200.0,
+    "max_estimated_cost": null,
+    "input_cost_per_million": null,
+    "output_cost_per_million": null,
+    "price_source": null
+  },
+  "routing": {
+    "models": []
+  },
+  "confirmation": {
+    "enabled": true,
+    "repeats": 3,
+    "min_improvement": 0.0
+  },
+  "meta": {
+    "enabled": true,
+    "interval": 2,
+    "max_tokens": 512,
+    "max_instruction_bytes": 2000,
+    "evaluation_window": 2
+  },
+  "pipeline": {
+    "mode": "async",
+    "max_inflight": 4,
+    "model_concurrency": 2,
+    "evaluation_concurrency": 1
+  }
+}

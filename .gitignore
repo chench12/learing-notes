@@ -48,3 +48,6 @@ desktop.ini
 *.log
 *.tmp
 tmp/
+
+# 合并项目时保留的本地 Git 元数据备份
+/.local-git-backups/

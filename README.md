@@ -8,9 +8,19 @@
 
 从自我反馈到程序搜索、测试时训练，记录 AI 如何持续改进候选解。
 
-[开始阅读](#学习笔记) · [原始笔记](./study-notes/notes.md) · [参考论文](#参考链接)
+[开始阅读](#学习笔记) · [代码项目](#代码项目) · [原始笔记](./study-notes/notes.md) · [参考论文](#参考链接)
 
 </div>
+
+---
+
+## 代码项目
+
+### [Evolve-Agent](./Evolve-Agent/README.md)
+
+依据 AlphaEvolve 公开方法重建的代码进化实验框架，支持任务替换、自动评估与多种父代选择策略。
+
+[项目说明](./Evolve-Agent/README.md) · [源代码](./Evolve-Agent/Evolve/) · [运行示例](./Evolve-Agent/Examples/) · [使用指南](./Evolve-Agent/docs/agent_usage.md)
 
 ---
 
