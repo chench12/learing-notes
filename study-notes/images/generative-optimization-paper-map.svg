@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1880" height="1090" viewBox="0 0 1880 1090" role="img" aria-labelledby="title desc">
+<title id="title">从反馈改进到程序搜索：六篇论文的时间、分类与联系</title>
+<desc id="desc">按首次公开时间排列Self-Refine、FunSearch、AlphaEvolve、TTT-Discover、Meta-Harness和Frontier-Eng；比较优化对象、反馈、经验载体和参数更新，区分前五篇优化方法与最后一篇评测基准。</desc>
+<rect x="0" y="0" width="1880" height="1090" rx="0" fill="#f8fafc" stroke="none"/>
+<text x="52" y="32" fill="#0f172a" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="36" font-weight="700" text-anchor="start" dominant-baseline="text-before-edge">从反馈改进到程序搜索</text>
+<text x="52" y="86" fill="#475569" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="400" text-anchor="start" dominant-baseline="text-before-edge">六篇论文的时间、主要角色与经验利用方式</text>
+<text x="1812" y="91" fill="#64748b" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" font-weight="400" text-anchor="end" dominant-baseline="text-before-edge">阅读路线图</text>
+<polyline points="72,194 1812,194" fill="none" stroke="#cbd5e1" stroke-width="3"/>
+<polygon points="1812,194 1802.9955289764732,198.3496553411123 1802.9955289764732,189.6503446588877" fill="#cbd5e1"/>
+<text x="192" y="150" fill="#475569" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="700" text-anchor="middle" dominant-baseline="text-before-edge">2023.03</text>
+<circle cx="192" cy="194" r="8" fill="#475569"/>
+<polyline points="192,203 192,234" fill="none" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="52" y="234" width="280" height="438" rx="16" fill="#ffffff" stroke="#dbe3ed"/>
+<rect x="68" y="250" width="248" height="34" rx="8" fill="#f1f5f9" stroke="none"/>
+<text x="192" y="255" fill="#475569" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" font-weight="700" text-anchor="middle" dominant-baseline="text-before-edge">输出迭代</text>
+<text x="70" y="301" fill="#0f172a" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="700" text-anchor="start" dominant-baseline="text-before-edge">Self-Refine</text>
+<text x="70" y="340" fill="#64748b" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" font-weight="400" text-anchor="start" dominant-baseline="text-before-edge">模型反馈 → 修订输出</text>
+<polyline points="70,374 314,374" fill="none" stroke="#e2e8f0" stroke-width="1"/>
+<text x="70" y="389" fill="#64748b" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" font-weight="400" text-anchor="start" dominant-baseline="text-before-edge">优化／评测对象</text>
+<text x="70" y="414" fill="#0f172a" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" font-weight="400" text-anchor="start" dominant-baseline="text-before-edge">当前文本或代码输出</text>
+<text x="70" y="463" fill="#64748b" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" font-weight="400" text-anchor="start" dominant-baseline="text-before-edge">反馈来源</text>
+<text x="70" y="488" fill="#0f172a" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" font-weight="400" text-anchor="start" dominant-baseline="text-before-edge">同一模型生成的反馈</text>
+<text x="70" y="537" fill="#64748b" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" font-weight="400" text-anchor="start" dominant-baseline="text-before-edge">经验如何积累</text>
+<text x="70" y="562" fill="#0f172a" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" font-weight="400" text-anchor="start" dominant-baseline="text-before-edge">当前输出＋反馈</text>
+<rect x="68" y="628" width="248" height="29" rx="6" fill="#f1f5f9" stroke="none"/>
+<text x="192" y="632" fill="#475569" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="17" font-weight="400" text-anchor="middle" dominant-baseline="text-before-edge">模型参数不更新</text>
+<text x="488" y="150" fill="#2563eb" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="700" text-anchor="middle" dominant-baseline="text-before-edge">2023.12</text>
+<circle cx="488" cy="194" r="8" fill="#2563eb"/>
+<polyline points="488,203 488,234" fill="none" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="348" y="234" width="280" height="438" rx="16" fill="#ffffff" stroke="#dbe3ed"/>
+<rect x="364" y="250" width="248" height="34" rx="8" fill="#eff6ff" stroke="none"/>
+<text x="488" y="255" fill="#2563eb" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" font-weight="700" text-anchor="middle" dominant-baseline="text-before-edge">演化程序搜索</text>
+<text x="366" y="301" fill="#0f172a" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="700" text-anchor="start" dominant-baseline="text-before-edge">FunSearch</text>
+<text x="366" y="340" fill="#64748b" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" font-weight="400" text-anchor="start" dominant-baseline="text-before-edge">执行评分＋岛屿搜索</text>
+<polyline points="366,374 610,374" fill="none" stroke="#e2e8f0" stroke-width="1"/>
+<text x="366" y="389" fill="#64748b" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" font-weight="400" text-anchor="start" dominant-baseline="text-before-edge">优化／评测对象</text>
+<text x="366" y="414" fill="#0f172a" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" font-weight="400" text-anchor="start" dominant-baseline="text-before-edge">求解问题的关键函数</text>
+<text x="366" y="463" fill="#64748b" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" font-weight="400" text-anchor="start" dominant-baseline="text-before-edge">反馈来源</text>
+<text x="366" y="488" fill="#0f172a" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" font-weight="400" text-anchor="start" dominant-baseline="text-before-edge">外部执行评估</text>
+<text x="366" y="537" fill="#64748b" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" font-weight="400" text-anchor="start" dominant-baseline="text-before-edge">经验如何积累</text>
+<text x="366" y="562" fill="#0f172a" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" font-weight="400" text-anchor="start" dominant-baseline="text-before-edge">程序数据库</text>
+<text x="366" y="586" fill="#0f172a" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" font-weight="400" text-anchor="start" dominant-baseline="text-before-edge">岛屿／聚类选择</text>
+<rect x="364" y="628" width="248" height="29" rx="6" fill="#eff6ff" stroke="none"/>
+<text x="488" y="632" fill="#2563eb" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="17" font-weight="400" text-anchor="middle" dominant-baseline="text-before-edge">模型参数不更新</text>
+<text x="784" y="150" fill="#2563eb" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="700" text-anchor="middle" dominant-baseline="text-before-edge">2025.05</text>
+<circle cx="784" cy="194" r="8" fill="#2563eb"/>
+<polyline points="784,203 784,234" fill="none" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="644" y="234" width="280" height="438" rx="16" fill="#ffffff" stroke="#dbe3ed"/>
+<rect x="660" y="250" width="248" height="34" rx="8" fill="#eff6ff" stroke="none"/>
+<text x="784" y="255" fill="#2563eb" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" font-weight="700" text-anchor="middle" dominant-baseline="text-before-edge">演化程序搜索</text>
+<text x="662" y="301" fill="#0f172a" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="700" text-anchor="start" dominant-baseline="text-before-edge">AlphaEvolve</text>
+<text x="662" y="340" fill="#64748b" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" font-weight="400" text-anchor="start" dominant-baseline="text-before-edge">多代码块＋模型集成</text>
+<polyline points="662,374 906,374" fill="none" stroke="#e2e8f0" stroke-width="1"/>
+<text x="662" y="389" fill="#64748b" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" font-weight="400" text-anchor="start" dominant-baseline="text-before-edge">优化／评测对象</text>
+<text x="662" y="414" fill="#0f172a" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" font-weight="400" text-anchor="start" dominant-baseline="text-before-edge">候选程序的多个代码块</text>
+<text x="662" y="463" fill="#64748b" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" font-weight="400" text-anchor="start" dominant-baseline="text-before-edge">反馈来源</text>
+<text x="662" y="488" fill="#0f172a" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" font-weight="400" text-anchor="start" dominant-baseline="text-before-edge">执行评估与多指标反馈</text>
+<text x="662" y="537" fill="#64748b" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" font-weight="400" text-anchor="start" dominant-baseline="text-before-edge">经验如何积累</text>
+<text x="662" y="562" fill="#0f172a" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" font-weight="400" text-anchor="start" dominant-baseline="text-before-edge">程序数据库</text>
+<text x="662" y="586" fill="#0f172a" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" font-weight="400" text-anchor="start" dominant-baseline="text-before-edge">提示构建与演化搜索</text>
+<rect x="660" y="628" width="248" height="29" rx="6" fill="#eff6ff" stroke="none"/>
+<text x="784" y="632" fill="#2563eb" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="17" font-weight="400" text-anchor="middle" dominant-baseline="text-before-edge">模型参数不更新</text>
+<text x="1080" y="150" fill="#7c3aed" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="700" text-anchor="middle" dominant-baseline="text-before-edge">2026.01</text>
+<circle cx="1080" cy="194" r="8" fill="#7c3aed"/>
+<polyline points="1080,203 1080,234" fill="none" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="940" y="234" width="280" height="438" rx="16" fill="#ffffff" stroke="#dbe3ed"/>
+<rect x="956" y="250" width="248" height="34" rx="8" fill="#f5f3ff" stroke="none"/>
+<text x="1080" y="255" fill="#7c3aed" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" font-weight="700" text-anchor="middle" dominant-baseline="text-before-edge">搜索＋参数学习</text>
+<text x="958" y="301" fill="#0f172a" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="700" text-anchor="start" dominant-baseline="text-before-edge">TTT-Discover</text>
+<text x="958" y="340" fill="#64748b" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" font-weight="400" text-anchor="start" dominant-baseline="text-before-edge">PUCT复用＋测试时训练</text>
+<polyline points="958,374 1202,374" fill="none" stroke="#e2e8f0" stroke-width="1"/>
+<text x="958" y="389" fill="#64748b" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" font-weight="400" text-anchor="start" dominant-baseline="text-before-edge">优化／评测对象</text>
+<text x="958" y="414" fill="#0f172a" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" font-weight="400" text-anchor="start" dominant-baseline="text-before-edge">候选解</text>
+<text x="958" y="438" fill="#0f172a" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" font-weight="400" text-anchor="start" dominant-baseline="text-before-edge">同时训练生成策略</text>
+<text x="958" y="463" fill="#64748b" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" font-weight="400" text-anchor="start" dominant-baseline="text-before-edge">反馈来源</text>
+<text x="958" y="488" fill="#0f172a" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" font-weight="400" text-anchor="start" dominant-baseline="text-before-edge">可验证奖励</text>
+<text x="958" y="537" fill="#64748b" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" font-weight="400" text-anchor="start" dominant-baseline="text-before-edge">经验如何积累</text>
+<text x="958" y="562" fill="#0f172a" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" font-weight="400" text-anchor="start" dominant-baseline="text-before-edge">候选存档＋PUCT</text>
+<text x="958" y="586" fill="#0f172a" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" font-weight="400" text-anchor="start" dominant-baseline="text-before-edge">奖励驱动LoRA更新</text>
+<rect x="956" y="628" width="248" height="29" rx="6" fill="#f5f3ff" stroke="none"/>
+<text x="1080" y="632" fill="#7c3aed" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="17" font-weight="400" text-anchor="middle" dominant-baseline="text-before-edge">更新LoRA参数</text>
+<text x="1376" y="150" fill="#0f766e" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="700" text-anchor="middle" dominant-baseline="text-before-edge">2026.03</text>
+<circle cx="1376" cy="194" r="8" fill="#0f766e"/>
+<polyline points="1376,203 1376,234" fill="none" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="1236" y="234" width="280" height="438" rx="16" fill="#ffffff" stroke="#dbe3ed"/>
+<rect x="1252" y="250" width="248" height="34" rx="8" fill="#f0fdfa" stroke="none"/>
+<text x="1376" y="255" fill="#0f766e" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" font-weight="700" text-anchor="middle" dominant-baseline="text-before-edge">harness程序搜索</text>
+<text x="1254" y="301" fill="#0f172a" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="700" text-anchor="start" dominant-baseline="text-before-edge">Meta-Harness</text>
+<text x="1254" y="340" fill="#64748b" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" font-weight="400" text-anchor="start" dominant-baseline="text-before-edge">Coding agent诊断与改写</text>
+<polyline points="1254,374 1498,374" fill="none" stroke="#e2e8f0" stroke-width="1"/>
+<text x="1254" y="389" fill="#64748b" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" font-weight="400" text-anchor="start" dominant-baseline="text-before-edge">优化／评测对象</text>
+<text x="1254" y="414" fill="#0f172a" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" font-weight="400" text-anchor="start" dominant-baseline="text-before-edge">模型外围的harness代码</text>
+<text x="1254" y="463" fill="#64748b" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" font-weight="400" text-anchor="start" dominant-baseline="text-before-edge">反馈来源</text>
+<text x="1254" y="488" fill="#0f172a" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" font-weight="400" text-anchor="start" dominant-baseline="text-before-edge">评分＋原始执行轨迹</text>
+<text x="1254" y="537" fill="#64748b" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" font-weight="400" text-anchor="start" dominant-baseline="text-before-edge">经验如何积累</text>
+<text x="1254" y="562" fill="#0f172a" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" font-weight="400" text-anchor="start" dominant-baseline="text-before-edge">文件系统保存完整历史</text>
+<text x="1254" y="586" fill="#0f172a" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" font-weight="400" text-anchor="start" dominant-baseline="text-before-edge">Proposer按需检索</text>
+<rect x="1252" y="628" width="248" height="29" rx="6" fill="#f0fdfa" stroke="none"/>
+<text x="1376" y="632" fill="#0f766e" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="17" font-weight="400" text-anchor="middle" dominant-baseline="text-before-edge">基础模型参数不更新</text>
+<text x="1672" y="150" fill="#b45309" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="700" text-anchor="middle" dominant-baseline="text-before-edge">2026.04</text>
+<circle cx="1672" cy="194" r="8" fill="#b45309"/>
+<polyline points="1672,203 1672,234" fill="none" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="1532" y="234" width="280" height="438" rx="16" fill="#ffffff" stroke="#dbe3ed"/>
+<rect x="1548" y="250" width="248" height="34" rx="8" fill="#fffbeb" stroke="none"/>
+<text x="1672" y="255" fill="#b45309" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" font-weight="700" text-anchor="middle" dominant-baseline="text-before-edge">评测基准</text>
+<text x="1550" y="301" fill="#0f172a" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="700" text-anchor="start" dominant-baseline="text-before-edge">Frontier-Eng</text>
+<text x="1550" y="340" fill="#64748b" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" font-weight="400" text-anchor="start" dominant-baseline="text-before-edge">真实约束＋有限预算</text>
+<polyline points="1550,374 1794,374" fill="none" stroke="#e2e8f0" stroke-width="1"/>
+<text x="1550" y="389" fill="#64748b" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" font-weight="400" text-anchor="start" dominant-baseline="text-before-edge">优化／评测对象</text>
+<text x="1550" y="414" fill="#0f172a" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" font-weight="400" text-anchor="start" dominant-baseline="text-before-edge">评测候选产物优化能力</text>
+<text x="1550" y="463" fill="#64748b" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" font-weight="400" text-anchor="start" dominant-baseline="text-before-edge">反馈来源</text>
+<text x="1550" y="488" fill="#0f172a" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" font-weight="400" text-anchor="start" dominant-baseline="text-before-edge">独立验证器</text>
+<text x="1550" y="512" fill="#0f172a" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" font-weight="400" text-anchor="start" dominant-baseline="text-before-edge">可行性＋标量得分</text>
+<text x="1550" y="537" fill="#64748b" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" font-weight="400" text-anchor="start" dominant-baseline="text-before-edge">经验如何积累</text>
+<text x="1550" y="562" fill="#0f172a" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" font-weight="400" text-anchor="start" dominant-baseline="text-before-edge">由被测方法决定</text>
+<rect x="1548" y="628" width="248" height="29" rx="6" fill="#fffbeb" stroke="none"/>
+<text x="1672" y="632" fill="#b45309" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="17" font-weight="400" text-anchor="middle" dominant-baseline="text-before-edge">不规定参数更新方式</text>
+<polyline points="192,672 192,700" fill="none" stroke="#94a3b8" stroke-width="2"/>
+<polyline points="488,672 488,700" fill="none" stroke="#94a3b8" stroke-width="2"/>
+<polyline points="784,672 784,700" fill="none" stroke="#94a3b8" stroke-width="2"/>
+<polyline points="1080,672 1080,700" fill="none" stroke="#94a3b8" stroke-width="2"/>
+<polyline points="1376,672 1376,700" fill="none" stroke="#94a3b8" stroke-width="2"/>
+<polyline points="192,700 1376,700" fill="none" stroke="#94a3b8" stroke-width="2"/>
+<polyline points="784,700 784,726" fill="none" stroke="#94a3b8" stroke-width="2"/>
+<polygon points="784,726 779.6503446588877,716.9955289764732 788.3496553411123,716.9955289764732" fill="#94a3b8"/>
+<rect x="52" y="730" width="1464" height="86" rx="12" fill="#eaf1fb" stroke="none"/>
+<text x="80" y="745" fill="#1e40af" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="20" font-weight="700" text-anchor="start" dominant-baseline="text-before-edge">方法层的共同机制</text>
+<text x="80" y="777" fill="#334155" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="400" text-anchor="start" dominant-baseline="text-before-edge">提出候选 → 获取反馈 → 利用经验继续改进；差别在于改进对象、反馈粒度与经验载体。</text>
+<polyline points="1672,672 1672,726" fill="none" stroke="#b45309" stroke-width="2"/>
+<polygon points="1672,726 1667.6503446588877,716.9955289764732 1676.3496553411123,716.9955289764732" fill="#b45309"/>
+<rect x="1532" y="730" width="280" height="86" rx="12" fill="#fff3d6" stroke="none"/>
+<text x="1550" y="745" fill="#92400e" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="20" font-weight="700" text-anchor="start" dominant-baseline="text-before-edge">评测层：统一比较能力</text>
+<text x="1550" y="778" fill="#78350f" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" font-weight="400" text-anchor="start" dominant-baseline="text-before-edge">约束 · 预算 · 最佳可行得分</text>
+<rect x="52" y="840" width="1760" height="156" rx="12" fill="#ffffff" stroke="#dbe3ed"/>
+<text x="76" y="856" fill="#0f172a" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="20" font-weight="700" text-anchor="start" dominant-baseline="text-before-edge">关键区分</text>
+<text x="76" y="895" fill="#7c3aed" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="700" text-anchor="start" dominant-baseline="text-before-edge">TTT-Discover：改生成分布</text>
+<text x="76" y="931" fill="#475569" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" font-weight="400" text-anchor="start" dominant-baseline="text-before-edge">针对当前问题训练生成策略</text>
+<text x="76" y="958" fill="#475569" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" font-weight="400" text-anchor="start" dominant-baseline="text-before-edge">最终交付预算内找到的最佳解</text>
+<text x="660" y="895" fill="#0f766e" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="700" text-anchor="start" dominant-baseline="text-before-edge">Meta-Harness：改执行程序</text>
+<text x="660" y="931" fill="#475569" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" font-weight="400" text-anchor="start" dominant-baseline="text-before-edge">重写组织上下文与行动的harness</text>
+<text x="660" y="958" fill="#475569" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" font-weight="400" text-anchor="start" dominant-baseline="text-before-edge">追求目标任务上的表现与成本权衡</text>
+<text x="1240" y="895" fill="#b45309" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="700" text-anchor="start" dominant-baseline="text-before-edge">Frontier-Eng：测优化能力</text>
+<text x="1240" y="931" fill="#475569" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" font-weight="400" text-anchor="start" dominant-baseline="text-before-edge">提供跨工程领域任务与评价指标</text>
+<text x="1240" y="958" fill="#475569" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" font-weight="400" text-anchor="start" dominant-baseline="text-before-edge">具体搜索与学习机制由被测方法决定</text>
+<polyline points="635,891 635,975" fill="none" stroke="#e2e8f0" stroke-width="1"/>
+<polyline points="1215,891 1215,975" fill="none" stroke="#e2e8f0" stroke-width="1"/>
+<text x="52" y="1016" fill="#64748b" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="17" font-weight="400" text-anchor="start" dominant-baseline="text-before-edge">时间按首次公开月份排序，间距不代表实际时间跨度；AlphaEvolve于2025.05公开、2025.06上传arXiv。</text>
+<text x="52" y="1043" fill="#64748b" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="17" font-weight="400" text-anchor="start" dominant-baseline="text-before-edge">分类表示论文的主要角色；连线表示共同机制，不表示直接继承、优劣排序或已完成对应方法间的实验对比。</text>
+</svg>
