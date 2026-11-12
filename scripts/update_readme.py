@@ -1,4 +1,4 @@
-"""将学习笔记同步到 GitHub 仓库首页：python scripts/update_readme.py。"""
+"""统一公式兼容写法并同步 GitHub 首页：python scripts/update_readme.py。"""
 
 from pathlib import Path
 import re
@@ -17,7 +17,52 @@ GUIDES = {
 }
 
 
+INLINE_TOKEN = re.compile(
+    r"(?<![\\$])\$(?!\$)(?:`(?P<quoted>[^`\n]+)`|(?P<plain>[^$\n]+?))\$(?!\$)"
+    r"|(?P<ticks>`+).*?(?P=ticks)"
+)
+
+
+def normalize_math(source: str) -> str:
+    """只处理公式，保留普通代码、Mermaid 和正文。"""
+    lines = []
+    fence = None
+    display = False
+    for line in source.splitlines(keepends=True):
+        marker = re.match(r"^ {0,3}(`{3,}|~{3,})(.*)$", line.rstrip("\r\n"))
+        if fence:
+            char, length, language = fence
+            if marker and marker[1][0] == char and len(marker[1]) >= length and not marker[2].strip():
+                fence = None
+            elif language == "math":
+                line = line.replace(r"\operatorname", r"\mathrm")
+            lines.append(line)
+            continue
+        if marker:
+            fence = (marker[1][0], len(marker[1]), marker[2].strip())
+        elif line.strip() == "$$":
+            display = not display
+        elif display:
+            line = line.replace(r"\operatorname", r"\mathrm")
+        else:
+            def replace_inline(match):
+                if match["ticks"]:
+                    return match[0]
+                formula = match["quoted"] if match["quoted"] is not None else match["plain"]
+                formula = formula.strip().replace(r"\operatorname", r"\mathrm")
+                before = " " if match.start() and not line[match.start() - 1].isspace() else ""
+                after = " " if match.end() < len(line) and not line[match.end()].isspace() else ""
+                return before + "$`" + formula + "`$" + after
+
+            line = INLINE_TOKEN.sub(replace_inline, line)
+        lines.append(line)
+    if display:
+        raise ValueError("块级公式缺少配对的 $$，请修正后再同步。")
+    return "".join(lines)
+
+
 def build_readme(source: str) -> str:
+    source = normalize_math(source)
     topics = [
         title
         for title in re.findall(r"^## (.+)$", source, re.MULTILINE)
@@ -61,7 +106,12 @@ def build_readme(source: str) -> str:
 | 序号 | 主题 | 阅读要点 |
 | :--- | :--- | :--- |
 """
-    footer = """
+    title = re.search(r"^# (.+)$", source, re.MULTILINE)
+    if title:
+        anchor = re.sub(r"[^\w\- ]", "", title[1].lower()).replace(" ", "-")
+        header = header.replace("#生成式优化笔记", "#" + anchor)
+
+    footer = r"""
 
 ---
 
@@ -77,6 +127,9 @@ def build_readme(source: str) -> str:
 python scripts/update_readme.py
 ```
 
+同步时会统一行内公式为 GitHub 支持的美元符号配合反引号的写法，
+并将公式中的 `\operatorname` 替换为兼容的 `\mathrm`；普通代码与 Mermaid 不受影响。
+
 提交时同时包含 `study-notes/notes.md`、`README.md` 和新增的图片。
 
 本仓库采用 [MIT License](./LICENSE)。
@@ -87,5 +140,10 @@ python scripts/update_readme.py
 
 
 if __name__ == "__main__":
-    TARGET.write_text(build_readme(SOURCE.read_text(encoding="utf-8")), encoding="utf-8")
-    print("已同步 README.md：首页包含完整笔记、章节导航和图片。")
+    original = SOURCE.read_text(encoding="utf-8")
+    normalized = normalize_math(original)
+    readme = build_readme(normalized)
+    if normalized != original:
+        SOURCE.write_text(normalized, encoding="utf-8")
+    TARGET.write_text(readme, encoding="utf-8")
+    print("已统一公式写法，并同步 README.md。")
